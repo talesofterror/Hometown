@@ -5,10 +5,15 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 0.5f; 
+    private Camera cam;
     Vector3 movementVectorX;
     Vector3 movementVectorY;
     Vector3 movementVectorZ;
 
+    void Awake () {
+      print(cam);
+    }
+ 
     void Update()
     {
         float speedDelta = speed * Time.deltaTime;

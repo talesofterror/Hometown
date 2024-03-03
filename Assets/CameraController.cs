@@ -13,12 +13,12 @@ public class CameraController : MonoBehaviour
 
     void Update()
   {
-    //MouseControl();
+    MouseControl();
   }
 
   private void MouseControl()
   {
-    float MouseX = Input.mousePosition.x / lookSpeed;
+    float MouseX = Input.mousePosition.x / -lookSpeed / 3;
     float MouseY = Input.mousePosition.y / lookSpeed;
 
     transform.eulerAngles = new Vector3(transform.rotation.y - MouseY, transform.rotation.x + MouseX, transform.rotation.z);
